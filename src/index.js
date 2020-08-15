@@ -37,11 +37,6 @@ function Paragraph({ image, index, offset, factor, header, aspect, text }) {
         <Text left={left} right={!left} size={w * 0.04} color={color} top position={[((left ? -w : w) * size) / 2, (w * size) / aspect / 2 + 0.5, -1]}>
           {header}
         </Text>
-        <Block factor={0.2}>
-          <Text opacity={0.5} size={w * 0.1} color="#bcbaba" position={[((left ? w : -w) / 2) * size, (w * size) / aspect / 1.5, -10]}>
-            {header}
-          </Text>
-        </Block>
       </group>
     </Block>
   )
@@ -56,16 +51,6 @@ function Content() {
   const { contentMaxWidth: w, canvasWidth, canvasHeight, mobile } = useBlock()
   return (
     <>
-      <Block factor={1} offset={0}>
-        <Block factor={1.2}>
-          <Text left size={w * 0.08} position={[-w / 3.2, 0.5, -1]} color="#d40749">
-            PRODIGIOUS
-          </Text>
-        </Block>
-        <Block factor={1.0}>
-          <Dom position={[-w / 6, -w * 0.08 + 0.25, -1]}>Benefits.</Dom>
-        </Block>
-      </Block>
       {state.paragraphs.map((props, index) => (
         <Paragraph key={index} index={index} {...props} image={images[index]} />
       ))}
@@ -97,7 +82,7 @@ function App() {
         ))}
       </div>
       <div className="frame">
-        <h1 className="frame__title">Prodigious</h1>
+        <img src="/Logo.png"/>
         <div className="frame__links">
           <a className="frame__link" href="#00" children="Home" />
           <a className="frame__link" href="#01" children="Health" />

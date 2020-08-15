@@ -26,8 +26,12 @@ body {
 }
 
 a {
-  color: #545454;
+  color: white;
   text-decoration: none;
+}
+
+img {
+  width: 10rem;
 }
 
 a:focus, 
@@ -103,8 +107,8 @@ a:hover {
 	}
 	.frame {
     display: grid;
-    height: 100vh;
-    padding: 2rem 3.7rem;
+    background-color: rgba(29,122,139,0.6);
+    padding: 1rem 3.7rem;
     pointer-events: none;
 		align-content: space-between;
 		grid-template-columns: 50% 50%;
